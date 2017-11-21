@@ -1,0 +1,1 @@
+<a href="mailto:email@domain.com">Почта через Include</a>
