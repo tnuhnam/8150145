@@ -79,7 +79,8 @@ Loc::loadMessages(__FILE__);?>
     addJs(SITE_TEMPLATE_PATH."/_include/js/jquery.roundabout.js", true);?>
     <?Asset::getInstance()->
     addJs(SITE_TEMPLATE_PATH."/_include/js/jquery.roundabout-shapes-1.1.js", true);?>
-    <link rel="stylesheet" href="_include/css/jquery.roundabout.css" type="text/css" media="screen" />
+    <?Asset::getInstance()->
+    addCss(SITE_TEMPLATE_PATH."/_include/css/jquery.roundabout.css");?>
     <!-- End Load -->
 
     <!-- Load SWFObject, used for video embedding -->
