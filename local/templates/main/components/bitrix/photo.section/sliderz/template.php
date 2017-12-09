@@ -13,22 +13,21 @@
 $this->setFrameMode(true);
 ?>
 
-
-
 <div class="slide slide-roundabout bg1">
 	<div class="containit ornament-right">
 		<div class="roundaboutshadow">
 			<h1 class="mb4">You can have a Bigger single  Roundabout here.</h1>
 			<p class="mb20">Amazingly this IS compatible with all modern and current Browsers.</p>
 			<!-- roundabout images targets, prettyphoto opens on click of the middle item -->
-
 			<!-- the actual roundabout -->
 			<?if (!empty($arResult)):?>
 			<ul id="roundabout">
-				<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="/upload/medialibrary/844/844a24b6a7f5c594274c0e43b3e0531d.jpg" alt="" /></a></li>
-				<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="/upload/medialibrary/00d/00d43027a7f7b1ab488e8f1ca53d58c3.png" alt="" /></a></li>
-				<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="/upload/medialibrary/756/7566ddbca549cb347daa1ceed7c6d77e.jpg" alt="" /></a></li>
-				<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="/upload/medialibrary/2b9/2b9b54613e8b754786b9766db670f164.jpg" alt="" /></a></li>
+				<?foreach($arResult["ROWS"] as $arItems):?>
+					<?foreach($arItems as $arItem):?>
+				<li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="<?=$arItem["PICTURE"]["SRC"]?>" alt="" /></a></li>
+
+					<?endforeach;?>
+				<?endforeach;?>
 			</ul>
 			<?endif;?>
 			<div id="filler"><!--  --></div>
@@ -104,3 +103,8 @@ $this->setFrameMode(true);
 	</div>
 
 </div>
+
+
+<!-----------------------------------------------||||||||||||||||||||||||||||||||||---------------------------------------------------->
+
+

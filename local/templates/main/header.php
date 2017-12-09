@@ -190,7 +190,7 @@ Loc::loadMessages(__FILE__);?>
 <div class="header-alt">
 <!-- тут был слайдер -->
 
-    <?$APPLICATION->IncludeComponent("bitrix:photo.section", "sliders", Array(
+    <?$APPLICATION->IncludeComponent("bitrix:photo.section", "sliderz", Array(
 	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
 		"AJAX_MODE" => "N",	// Включить режим AJAX
 		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
@@ -246,7 +246,9 @@ Loc::loadMessages(__FILE__);?>
 		"SHOW_404" => "N",	// Показ специальной страницы
 	),
 	false
-);?>
+);?><br>
+
+
 
 
 
