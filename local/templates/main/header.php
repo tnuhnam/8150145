@@ -188,106 +188,67 @@ Loc::loadMessages(__FILE__);?>
 <!-- end top and main menu -->
 <!-- start header alternate -->
 <div class="header-alt">
+<!-- тут был слайдер -->
 
-    <div class="slide slide-roundabout bg1">
-        <div class="containit ornament-right">
-            <div class="roundaboutshadow">
-                <h1 class="mb4">You can have a Bigger single  Roundabout here.</h1>
-                <p class="mb20">Amazingly this IS compatible with all modern and current Browsers.</p>
-                <!-- roundabout images targets, prettyphoto opens on click of the middle item -->
+    <?$APPLICATION->IncludeComponent("bitrix:photo.section", "sliders", Array(
+	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"AJAX_MODE" => "N",	// Включить режим AJAX
+		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+		"BROWSER_TITLE" => "-",	// Установить заголовок окна браузера из свойства
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
+		"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+		"ELEMENT_SORT_FIELD" => "sort",	// По какому полю сортируем фотографии
+		"ELEMENT_SORT_ORDER" => "asc",	// Порядок сортировки фотографий в разделе
+		"FIELD_CODE" => array(	// Поля
+			0 => "ID",
+			1 => "NAME",
+			2 => "SORT",
+			3 => "PREVIEW_PICTURE",
+			4 => "",
+		),
+		"FILTER_NAME" => "arrFilter",	// Имя массива со значениями фильтра для фильтрации элементов
+		"IBLOCK_ID" => "7",	// Инфоблок
+		"IBLOCK_TYPE" => "content",	// Тип инфоблока
+		"LINE_ELEMENT_COUNT" => "3",	// Количество фотографий, выводимых в одной строке таблицы
+		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+		"META_DESCRIPTION" => "-",	// Установить описание страницы из свойства
+		"META_KEYWORDS" => "-",	// Установить ключевые слова страницы из свойства
+		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+		"PAGER_TITLE" => "Фотографии",	// Название категорий
+		"PAGE_ELEMENT_COUNT" => "20",	// Количество элементов на странице
+		"PROPERTY_CODE" => array(	// Свойства
+			0 => "URL",
+			1 => "",
+		),
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"SECTION_USER_FIELDS" => array(	// Свойства раздела
+			0 => "",
+			1 => "",
+		),
+		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+		"SET_STATUS_404" => "N",	// Устанавливать статус 404
+		"SET_TITLE" => "N",	// Устанавливать заголовок страницы
+		"SHOW_404" => "N",	// Показ специальной страницы
+	),
+	false
+);?>
 
-                <script type="text/javascript" charset="utf-8">
-                    function roundaboutimage1(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase1.jpg', 'title', 'Some Brilliant Project'); }
-                    function roundaboutimage2(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase2.jpg', 'title', 'Another One'); }
-                    function roundaboutimage3(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase3.jpg', 'title', 'This is Insane'); }
-                    function roundaboutimage4(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase4.jpg', 'title', 'Another Comment'); }
-                    function roundaboutimage5(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase5.jpg', 'title', 'This roundabout Rules'); }
-                    function roundaboutimage6(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase6.jpg', 'title', 'Awsome Commment'); }
-                    function roundaboutimage7(){  $.prettyPhoto.open('<?=SITE_TEMPLATE_PATH;?>/images/showcase/showcase7.jpg', 'title', 'And Another One'); }
-                </script>
-                <!-- the actual roundabout -->
-                <ul id="roundabout">
-                    <li id="roundaboutimage1"><a href="javascript:roundaboutimage1();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase1.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage2"><a href="javascript:roundaboutimage2();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase2.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage3"><a href="javascript:roundaboutimage3();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase3.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage4"><a href="javascript:roundaboutimage4();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase4.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage5"><a href="javascript:roundaboutimage5();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase1.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage6"><a href="javascript:roundaboutimage6();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase2.jpg" alt="" /></a></li>
-                    <li id="roundaboutimage7"><a href="javascript:roundaboutimage7();"><img src="<?=SITE_TEMPLATE_PATH;?>/images/showcase/roundabout/showcase3.jpg" alt="" /></a></li>
-                </ul>
-                <div id="filler"><!--  --></div>
-            </div>
-            <!-- start the roundabout with descriptions -->
-            <script type="text/javascript">
-                //<![CDATA[
-                var descs = {
-                    roundaboutimage1: 'Some text about the item <a href="#">a link</a> here. ',
-                    roundaboutimage2: 'He has the look of a wise, fierce warrior.',
-                    roundaboutimage3: 'Attention all mice: you&rsquo;ve been warned.',
-                    roundaboutimage4: 'Some text about the item <a href="#">a link</a> here.',
-                    roundaboutimage5: 'Introducing: the INCREDIBLE ROUNDABOUT!',
-                    roundaboutimage6: 'Attention all mice: you&rsquo;ve been warned.',
-                    roundaboutimage7: 'Yes you can have Video here if you want.'
-                };
-                // settings for first button, for each roundabout image one setting
-                var linkone = {
-                    roundaboutimage1: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage2: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage3: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage4: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage5: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage6: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>',
-                    roundaboutimage7: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>View Details</span></a>'
-                };
-                // settings for second button, for each roundabout image one setting
-                var linktwo = {
-                    roundaboutimage1: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    roundaboutimage2: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get it at Themeforest</span></a>',
-                    roundaboutimage3: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    roundaboutimage4: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Get it at Themeforest</span></a>',
-                    roundaboutimage5: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Do Something Now</span></a>',
-                    roundaboutimage6: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Purchase This Now</span></a>',
-                    roundaboutimage7: '<a class="btn-medium" href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn"><span>Cufon Buttons are Sexy</span></a>'
-                };
-                // what happens on focus and on blur
-                $('#roundabout li').focus(function() {
-                    var useLinkone = (typeof linkone[$(this).attr('id')] != 'undefined') ? linkone[$(this).attr('id')] : '';
-                    $('#roundaboutlinkone').html(useLinkone).fadeIn(200);
-                    var useLinktwo = (typeof linktwo[$(this).attr('id')] != 'undefined') ? linktwo[$(this).attr('id')] : '';
-                    $('#roundaboutlinktwo').html(useLinktwo).fadeIn(200);
-                    var useText = (typeof descs[$(this).attr('id')] != 'undefined') ? descs[$(this).attr('id')] : '';
-                    $('#roundaboutdescription').html(useText).fadeIn(200);
-                    Cufon.replace('#roundaboutdescription, #roundaboutlinkone,  #roundaboutlinktwo', { hover: true, textShadow: '1px 1px 0 #ffffff', fontFamily: 'Museo' });
-                }).blur(function() {
-                    $('#roundaboutlinkone').fadeOut(200);
-                    $('#roundaboutlinktwo').fadeOut(200);
-                    $('#roundaboutdescription').fadeOut(200);
-                });
 
-                $(document).ready(function() {
-                    var interval;
-                    $('#roundabout')
-                        .roundabout({
-                            shape: 'lazySusan',
-                            easing: 'swing',
-                            minOpacity: 1, // 1 fully visible, 0 invisible
-                            minScale: 0.5, // tiny!
-                            duration: 400,
-                            btnNext: '#roundaboutnext',
-                            btnPrev: '#roundaboutprevious',
-                            clickToFocus: true
-                        });
-                });
-                function startAutoPlay() {
-                    return setInterval(function() {
-                        $('#roundabout').roundabout_animateToNextChild();
-                    }, 3000);
-                }
-                //]]>
-            </script>
-        </div>
-
-    </div>
 
 </div>
 <!-- end header alternate-->

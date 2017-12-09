@@ -1,5 +1,8 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
+<?//echo '<div style="background-color:#fff;"><pre>'.print_r($arResult,
+		//"true").'</pre></div>';?>
+
 	<div class="menu">
 		<!-- navigation start -->
 		<div id="navigation">
